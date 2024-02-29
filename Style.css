@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+:root{
+    --Ubantu:'Ubuntu', sans-serif;
+    --VarelaRound:'Varela Round', sans-serif;
+    --Ubantu_Large:'Ubuntu', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(54, 48, 48);
+
+}
+.TopBar{
+    font-family: var(--Ubantu);
+    display: flex;
+    width: 99vw;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color: rgb(5, 4, 4);
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    padding-bottom: 6px;
+    /* margin: 0 2rem; */
+    align-items: center;
+}
+#logo{
+    margin-left: 3rem;
+    margin-top: 5px;
+}
+#logoImg{
+    width: 50px;
+}
+.BrandText{  
+    margin-left: 3rem;  
+    width: fit-content;
+    color: aliceblue;
+}
+#BrandName{
+    width: 8rem;
+    margin: 0 auto;
+    font-size: 2vw;
+    font-family: var(--VarelaRound);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+#ExtraText{
+    font-family: var(--VarelaRound);
+    font-size: 0.8vw;
+}
+.search{
+    display: flex;
+    width: 23%;
+    margin-right: 2vw;
+    /* padding-right: 8rem; */
+    justify-content: space-between;
+}
+#searchBox{
+    width: 80%;
+}
+#searchBox input{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    caret-color: wheat;
+    padding-left:0.25rem;
+    color: white;
+    font-family: var(--VarelaRound);
+    width: 100%;
+}
+#searchImg{
+    filter: invert(100);
+    width: 26px;
+}
+.mainPage{
+    padding: 25px;
+    background: rgb(41, 9, 9) no-repeat;
+    color: white;
+    font-family: var(--VarelaRound);
+    width: 50vw;
+    /* display: flex; */
+    margin: 100px 5%;
+    border-radius: 10px;
+}
+.songList{
+    width: 100%;
+}
+.songList h1{
+    margin-bottom: 40px;
+}
+.songItems{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    background-color: black;
+    padding: 0 8px;
+}
+.currentSongBH{
+    position: fixed;
+    width: 35%;
+    right: 2vw;
+    top: 10vh;
+    /* margin-top: 17vh ;
+    margin-bottom: 17vh ; */
+    height: 560px;
+    background-color: rgb(73, 62, 62);
+    border-radius: 10px;
+    /* border: 2px solid white; */
+}
+#currentSongBannar{
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    border-radius: 10px;
+}
+
+#currentSongHeading{
+    font-family: var(--Ubantu);
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+}
+.BannarImg{
+    width: 40px;
+}
+
+
+
+.play-btn{
+    cursor: pointer;
+    width: 20px;
+    filter: invert();
+}
+
+
+.songStatusBar{
+    display: none;
+    position:sticky;
+    bottom: 0;
+    width: 95%;
+    margin: 0 2.5%;
+    height: 85px;
+    border-radius: 15px;
+    background-color: rgb(36, 23, 23);
+}
+.currentSong{
+    position: absolute;
+    left:3vw;
+    top: 45%;
+    color: white;
+    font-family:var(--Ubantu);
+    text-align: center;
+}
+.buttons{
+    position: relative;
+    top: 10px;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+#shuffelOnBtn{
+    display: none;
+}
+#loopBtn{
+    display: none;
+}
+.buttons img{
+    width: 30px;
+    filter: invert(40);
+    cursor: pointer;
+    transition: width 100ms ease-in;
+}
+.buttons img:hover{
+    width: 35px;
+}
+#mainPauseBtn{
+    display: none;
+}
+#current_time{
+    color: white;
+    position: absolute;
+    left: 30%;
+    /* top: ; */
+}
+#SongProgressBar{
+    width: 30%;
+    margin-left: 35%;
+    position: absolute;
+    bottom: 0.5rem;
+    cursor: pointer;
+}
+#Duration{
+    color: white;
+    position: absolute;
+    right: 30%;
+}
+.song_name{
+    width: 13vw;
+}
+.BlackBG{
+    background-color: rgb(20, 17, 17);
+}
+
+@media (max-width:800px) {
+    .currentSongBH{
+        display: none;
+    }
+    .mainPage{
+        width: 90vw;
+    }
+}
